@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20161129163429) do
+=======
+ActiveRecord::Schema.define(version: 20161129155403) do
+>>>>>>> 070610a1d0b819889e9b3961439e9671c02dc12b
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,7 +39,6 @@ ActiveRecord::Schema.define(version: 20161129163429) do
     t.integer  "length"
     t.integer  "user_id"
     t.string   "category"
-    t.string   "city"
     t.index ["user_id"], name: "index_massages_on_user_id", using: :btree
   end
 
