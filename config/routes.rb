@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
 root to: "massages#index"
 
+resources :users, only: [:show, :new, :create, :edit, :update, :destroy]
+
 end
