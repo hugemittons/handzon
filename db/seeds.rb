@@ -25,8 +25,6 @@ user_2 = User.create(
   masseuse: true
   )
 
-
-
 # Create massages
 massage_1 = Massage.create(
   category: "Holistic",
