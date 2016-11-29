@@ -7,6 +7,7 @@ class Massage < ApplicationRecord
   validates :length, presence: true, uniqueness: true
 
   has_many :attachments
+  belongs_to :user
 
 
 end
