@@ -1,15 +1,7 @@
 Rails.application.routes.draw do
-  get 'massages/index'
-
-  get 'massages/show'
-
-  get 'massages/create'
-
-  get 'massages/edit'
-
-  get 'massages/update'
-
-  get 'massages/destroy'
-
+resources :massages
+devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+root to: "massages#index"
+
 end
