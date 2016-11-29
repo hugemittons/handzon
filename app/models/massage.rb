@@ -1,5 +1,5 @@
 class Massage < ApplicationRecord
-  CATEGORIES = ["thai", "berber", "swedish", "japanese", "korean"]
+  CATEGORIES = ["Thai", "Berber", "Swedish", "Japanese", "Korean"]
   validates :category, inclusion: { in: CATEGORIES }
   validates :description, presence: true
   validates :tagline, presence: true

@@ -6,7 +6,7 @@
 
   <div class="container">
   <h1>Handzon</h1>
-  <h5>Massages on demand</h5>
+  <h5>Massage on demand</h5>
   <%= form_tag massages_path, :method => 'get', class: 'form-inline' do %>
   <p>
     <%= select_tag "city", options_from_collection_for_select(@massages, "id", "city") %>
