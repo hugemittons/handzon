@@ -1,0 +1,13 @@
+<h1><%= @massage.name %></h1>
+
+<ul>
+<% @massage.doses.each do |massage| %>
+  <li>
+    <%= massage.description %>, <%= massage.tagline%>
+    <%= massage.price %>
+    <%= massage.length%>
+
+    <%= link_to 'destroy', massage_path(massage), method: :delete %>
+  </li>
+<% end %>
+</ul>
