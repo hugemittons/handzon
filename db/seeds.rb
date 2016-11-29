@@ -43,7 +43,7 @@ massage_2 = Massage.create(
   tagline: "Exotic, unique and legendary",
   price: 98,
   length: 90,
-  city: "Madrid"
+  city: "Barcelona"
   )
 
 massage_3 = Massage.create(
@@ -53,7 +53,7 @@ massage_3 = Massage.create(
   tagline: "Unwind",
   price: 68,
   length: 60,
-  city: "Barcelona"
+  city: "Paris"
   )
 
 massage_4 = Massage.create(
@@ -63,7 +63,7 @@ massage_4 = Massage.create(
   tagline: "Shiatsu Back and Neck",
   price: 38,
   length: 30,
-  city: "Auckland"
+  city: "San Francisco"
   )
 
 massage_5 = Massage.create(
