@@ -25,8 +25,6 @@ user_2 = User.create(
   masseuse: true
   )
 
-
-
 # Create massages
 massage_1 = Massage.create(
   category: "Holistic",
@@ -74,7 +72,9 @@ massage_5 = Massage.create(
   description: "An excellent treatment for those suffering from poor circulation and stiffness, this full body massage uses a traditional Thai poultice to relieve tired and aching muscles and improves skin texture. By gently rolling and kneading a steamed muslin ball filled with a variety of Thai herbs, your muscles are gradually warmed until they are ready to receive the oil massage. Using the most relaxing Swedish techniques, this full body massage completely restores you from head to toe. Try the Thai Herbal Poultice Full Body massage for a unique and rejuvenating experience.",
   tagline: "Thai Herbal Poultice Full Body Massage",
   price: 110,
-  length: 90)
+  length: 90,
+  city: "Paris"
+  )
 
 massage_6 = Massage.create(
   category: "Berber",
@@ -82,7 +82,8 @@ massage_6 = Massage.create(
   description: "An express face, head and neck massage  to release tension.",
   tagline: "Oriental Relaxer - Mini Treatment",
   price: 40,
-  length: 20)
+  length: 20
+  )
 
 massage_7 = Massage.create(
   category: "Swedish",
