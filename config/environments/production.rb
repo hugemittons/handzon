@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #Margot: Add this for devise and authentication - NEED TO BE UPDATED WITH PROD INFO!!!
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
