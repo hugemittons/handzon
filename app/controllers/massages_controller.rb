@@ -5,6 +5,7 @@ class MassagesController < ApplicationController
   end
 
   def show
+    @appointment = Appointment.new
   end
 
   def new
@@ -18,9 +19,6 @@ class MassagesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def update
   end
 
   def update

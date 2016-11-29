@@ -1,4 +1,5 @@
 class Massage < ApplicationRecord
+
   CATEGORIES = ["Thai", "Berber", "Swedish", "Holistic", "Shiatsu"]
   validates :category, inclusion: { in: CATEGORIES }
   validates :description, presence: true
@@ -7,6 +8,7 @@ class Massage < ApplicationRecord
   validates :length, presence: true, uniqueness: true
 
   has_many :attachments
+  belongs_to :user
 
 
 end

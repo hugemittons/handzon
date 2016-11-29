@@ -1,7 +1,9 @@
-<h1>All the massages available </h1>
+<div class="container">
+  <h1>All the massages available </h1>
 
-<ul>
-  <% @massages.each do |massage| %>
-    <li><%= link_to massage.name, massage %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @massages.each do |massage| %>
+      <li><%= link_to massage.name, massage %></li>
+    <% end %>
+  </ul>
+</div>
