@@ -14,14 +14,14 @@ Massage.destroy_all
 user_1 = User.create(
   name: "Georges",
   email: "georges@gmail.com",
-  encrypted_password: "password",
+  password: "password",
   masseuse: false
   )
 
 user_2 = User.create(
   name: "Tim",
   email: "tim@gmail.com",
-  encrypted_password: "password",
+  password: "password",
   masseuse: true
   )
 
@@ -30,6 +30,7 @@ user_2 = User.create(
 # Create massages
 massage_1 = Massage.create(
   category: "Holistic",
+  user: user_1,
   description: "A deeply therapeutic holistic treatment using blends of essential oils that appeal to the senses, to get a personal response to the needs of each individual. Provides great feel good, frees us from stress and helps to restore balance.",
   tagline: "Get rid of your stress",
   price: 68,
