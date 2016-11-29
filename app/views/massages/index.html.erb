@@ -1,9 +1,10 @@
+<h1>All the massages available </h1>
 <div class="container">
-  <h1>All the massages available </h1>
-
-  <ul>
-    <% @massages.each do |massage| %>
-      <li><%= link_to massage.name, massage %></li>
-    <% end %>
-  </ul>
+  <div class="row">
+    <div class="col-xs-4">
+      <% @massages.each do |massage| %>
+      <%= render "shared/massage_card", :locals => { :massage => massage }%>
+      <% end %>
+    </div>
+  </div>
 </div>
