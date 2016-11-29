@@ -14,7 +14,7 @@ class AppointmentsController < ApplicationController
     # ^^ creates 'appointments.build' and sets the user_id' to 'current_user_id'
     # ^^^ appointement_params(datetime) are passed to the 'new appointment instance' from the form
     @appointment.massage = @massage
-    # ^ params is the massage hash with info about massage params ={massage_id: 11, category:...}
+    # ^ params is the massage hash with info about massage params ={massage_id: 11, city:"barcelona",category:...}
     # ^^ the path requires massage_id
     # ^^^ path: massage/massage_id/appointments
     @appointment.save
