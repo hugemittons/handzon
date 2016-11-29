@@ -5,5 +5,6 @@ devise_for :users
 root to: "massages#index"
 
 resources :users, only: [:show, :new, :create, :edit, :update, :destroy]
+resources :appointments, only: [:new, :create, :show, :destroy]
 
 end
