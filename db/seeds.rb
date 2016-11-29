@@ -34,7 +34,9 @@ massage_1 = Massage.create(
   description: "A deeply therapeutic holistic treatment using blends of essential oils that appeal to the senses, to get a personal response to the needs of each individual. Provides great feel good, frees us from stress and helps to restore balance.",
   tagline: "Get rid of your stress",
   price: 68,
-  length: 60)
+  length: 60,
+  city: "Barcelona"
+  )
 
 massage_2 = Massage.create(
   category: "Thai",
@@ -42,7 +44,9 @@ massage_2 = Massage.create(
   description: "The massage is based on the pressure of different energetic points to balance the energy and reduce tension, producing unsurpassable results, stimulating and strengthening body, mind and spirit. Recommended for reducing tension and increasing vitality. Massage done in tatami and without oil. We provide clothing to receive Thai massage.",
   tagline: "Exotic, unique and legendary",
   price: 98,
-  length: 90)
+  length: 90,
+  city: "Barcelona"
+  )
 
 massage_3 = Massage.create(
   category: "Berber",
@@ -50,7 +54,9 @@ massage_3 = Massage.create(
   description: "Start this relaxing mud hydrotherapy treatment by lying on a warm traditional Moroccan Hammam Massage slab. Your SenSpa therapist will then begin running warm water over your body using the Vichy shower, releasing gentle jets of water down the centre line of your body, stimulating pressure points by your spine. This hydrotherapy treatment is followed by a full body Moroccan Hammam mud massage using tradition Swedish techniques designed to relax and soothe muscles while also easing out any tensions or knots. Washing the mud off you using the overhead Vichy showers, a nourishing and moisturising balm is then applied to your body using long, stroking movements with this stimulating spa treatment ending with scalp massage.",
   tagline: "Unwind",
   price: 68,
-  length: 60)
+  length: 60,
+  city: "Paris"
+  )
 
 massage_4 = Massage.create(
   category: "Shiatsu",
@@ -58,7 +64,9 @@ massage_4 = Massage.create(
   description: "Massage of back, neck and head with applying pressure in points based in Shiatsu. Open energy channels to relieve stress and restore energy. For those people prefer a firm massage without oil.",
   tagline: "Shiatsu Back and Neck",
   price: 38,
-  length: 30)
+  length: 30,
+  city: "San Francisco"
+  )
 
 massage_5 = Massage.create(
   category: "Thai",
