@@ -16,5 +16,10 @@
 # Ignore Byebug command history file.
 .byebug_history
 
+# Ignore computer generated files
+.DS_Store
+
 # Ignore application configuration
 /config/application.yml
+
+

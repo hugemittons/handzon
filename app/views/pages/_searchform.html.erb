@@ -1,0 +1,13 @@
+<%= simple_form_for(@massages) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+     <%= f.collection_select :city, Massage.order(:city),:city,:city, include_blank: true, prompt: "select a city" %>
+    <%= f.collection_select :category, Massage.order(:category),:category,:category, include_blank: true, prompt: "select a category" %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
