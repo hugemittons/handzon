@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   before_action :set_user, only: [:show, :create, :edit, :update, :destroy]
 
   def show # GET /users/:id
