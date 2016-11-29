@@ -14,14 +14,14 @@ Massage.destroy_all
 user_1 = User.create(
   name: "Georges",
   email: "georges@gmail.com",
-  encrypted_password: "password"
+  encrypted_password: "password",
   masseuse: false
   )
 
 user_2 = User.create(
   name: "Tim",
   email: "tim@gmail.com",
-  encrypted_password: "password"
+  encrypted_password: "password",
   masseuse: true
   )
 
