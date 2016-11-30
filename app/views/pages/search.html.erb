@@ -3,7 +3,15 @@
   <div class="container-login-landing">
   <% if user_signed_in? %>
 
-    <%=link_to "SIGN OUT", destroy_user_session_path, method: :delete%>
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <a href="" id="navbar-wagon-menu" class="navbar-wagon-item navbar-wagon-button btn dropdown-toggle searchpage" data-toggle="dropdown">MY ACCOUNT</a>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to 'Dashboard', dashboard_path %></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
 
   <%else%>
 
