@@ -1,10 +1,20 @@
+
+
 <div class="wrapper" style="background-color: #666;">
 
 <div class="container">
-  <h3><%= params[:category] %> massages available in <%= params[:city] %></h3>
+<!--- determining if category is selected -->
+  <% if params[:category] == "Any Category"%>
+  <% @search_results = Massage.where city: params[:city] %>
+  <h3><%= @search_results.count %> massages available in <%= params[:city] %></h3>
+  <% else %>
+  <% @search_results = Massage.where city: params[:city], category: params[:category] %>
+  <h3><%= @search_results.count %> <%= params[:category] %> massages available in <%= params[:city] %></h3>
+  <% end %>
 
+<!-- printing cards -->
   <div class="row">
-      <% @massages.each do |massage| %>
+      <% @search_results.each do |massage| %>
         <div class="card col-xs-12 col-sm-4 col-md-3">
           <div class="card-category"><%= massage.tagline %></div>
           <div class="card-description">
