@@ -1,7 +1,7 @@
 <div class="wrapper" style="background-color: #666;">
 
 <div class="container">
-  <h1>Massages available in <%= params[:city] %> matching <%= params[:category] %></h1>
+  <h3><%= params[:category] %> massages available in <%= params[:city] %></h3>
 
   <div class="row">
       <% @massages.each do |massage| %>
@@ -9,14 +9,12 @@
           <div class="card-category"><%= massage.tagline %></div>
           <div class="card-description">
             <p><%= massage.category %></p>
-            <p><%= massage.description %></p>
 
             <p>&#8364;<%= massage.price %> for <%= massage.length %> minutes</p>
-            <p>Take it easy</p>
           </div>
           <!-- <img class="card-user avatar" src="bg-landing.jpg"> -->
           <%= image_tag "bg-landing.jpg", class: "card-user avatar" %>
-          <a class="card-link" href="#" ></a>
+          <a class="card-link" href="<%= link_to massage_path(massage) %>" ></a>
         </div>
       <% end %>
     </div>
