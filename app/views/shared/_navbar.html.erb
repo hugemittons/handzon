@@ -1,6 +1,11 @@
   <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/"><%= image_tag 'handzon_tp.png'%></a>
+
+  <div>
+    <%=link_to root_path do %>
+    <%= image_tag 'handzon_tp.png'%>
+    <% end %>
+  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -11,8 +16,8 @@
         <a href="" id="navbar-wagon-menu" class="navbar-wagon-item navbar-wagon-button btn dropdown-toggle" data-toggle="dropdown">My Account</a>
 <!--         <img src="http://placehold.it/50x50" class="avatar dropdown-toggle"  data-toggle="dropdown"> -->
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">My Details</a></li>
-          <li><a href="#">Sign Out</a></li>
+          <li><%= link_to 'My Details', edit_user_registration_path %></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path %></li>
         </ul>
       </div>
     </div>
