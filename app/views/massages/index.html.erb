@@ -1,11 +1,24 @@
+<div class="wrapper" style="background-color: #666;">
+
 <div class="container">
-  <h1>Massages available in <%= params[:city] %> matching <%= params[:category] %></h1>
+  <h3><%= params[:category] %> massages available in <%= params[:city] %></h3>
 
   <div class="row">
-    <div class="col-xs-4">
       <% @massages.each do |massage| %>
-      <%= render "shared/massage_card", :locals => { :massage => massage }%>
+        <div class="card col-xs-12 col-sm-4 col-md-3">
+          <div class="card-category"><%= massage.tagline %></div>
+          <div class="card-description">
+            <p><%= massage.category %></p>
+
+            <p>&#8364;<%= massage.price %> for <%= massage.length %> minutes</p>
+          </div>
+          <!-- <img class="card-user avatar" src="bg-landing.jpg"> -->
+          <%= image_tag "bg-landing.jpg", class: "card-user avatar" %>
+          <a class="card-link" href="<%= massage_path(massage)%>" ></a>
+        </div>
       <% end %>
-    </div>
   </div>
+  </div>
+</div>
+
 </div>
