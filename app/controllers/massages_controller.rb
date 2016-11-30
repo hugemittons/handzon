@@ -1,5 +1,7 @@
 class MassagesController < ApplicationController
 
+#before_action :massage, only: [:show, :index]
+
   def index
     @massages = Massage.all
   end
