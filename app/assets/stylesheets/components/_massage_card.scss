@@ -5,7 +5,12 @@
   color: #0B1532;
   position: relative;
   background-color: #47A8BD;
-  background-image: image-url('relaxed_lady.jpg')
+  background-image: image-url('relaxed_lady.jpg');
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fff;
+  margin: 10px;
+  border-radius: 10px;
 }
 .card-user {
   position: center;
@@ -16,7 +21,6 @@
   top: 10px;
   left: 120px;
   font-size: 20px;
-  text-transform: uppercase;
 }
 .card-description {
   position: absolute;

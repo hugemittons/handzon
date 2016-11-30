@@ -1,13 +1,34 @@
-<h1><%= @massage.name %></h1>
+<div class="container">
+  <h1><%= @massage.tagline %></h1>
 
-<ul>
-<% @massage.doses.each do |massage| %>
-  <li>
-    <%= massage.description %>, <%= massage.tagline%>
-    <%= massage.price %>
-    <%= massage.length%>
+  <p><%= @massage.description %></p>
+  <p><%= @massage.tagline %></p>
+      <p>&#8364;<%= @massage.price %> for <%= @massage.length%> minutes</p>
 
-    <%= link_to 'destroy', massage_path(massage), method: :delete %>
-  </li>
-<% end %>
-</ul>
+  <div class="media">
+    <div class="media-body">
+      <div class="media-section">
+        <h2>Pictures</h2>
+        ...
+      </div>
+      <div class="media-section">
+        <h2>Description</h2>
+        ...
+      </div>
+    </div>
+    <div class="media-aside">
+      <div class="media-section">
+        <h2>Share</h2>
+        ...
+      </div>
+      <div class="media-section">
+        <h2>382 upvotes</h2>
+        ...
+      </div>
+    </div>
+  </div>
+
+
+  <%= link_to 'destroy', massage_path(@massage), method: :delete %>
+  <%= link_to 'back to results', massages_path %>
+</div>
