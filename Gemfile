@@ -1,6 +1,4 @@
-#Margot: add gem for authentication
-gem 'devise'
-
+ruby '2.3.1'
 
 source 'https://rubygems.org'
 #Margot wants to do login stuff
