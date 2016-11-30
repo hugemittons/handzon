@@ -1,1 +1,11 @@
-<h2>testing appt form</h2>
+
+
+      <h2><%= @massage.tagline%></h2>
+        <%= simple_form_for @appointment, url: massage_appointments_path do |f| %>
+        <%= f.input :date_time, label: false %>
+        <%= f.hidden_field :massage_id , value: @massage.id  %>
+        <%= f.hidden_field :user_id , value: current_user.id  %>
+
+        <%= f.submit "book appointment", class: "btn btn-primary" %>
+      <% end %>
+

@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :find_appointment, only: [:show]
-  before_action :find_massage, only: [:create]
+  before_action :find_massage,:check_user, only: [:create]
   # before_action :find_user, only: [:show]
   # ^ not needed, device provides access on every page
 
@@ -8,6 +8,7 @@ class AppointmentsController < ApplicationController
   end
 
   def create
+
     # need: datetime, user_id and massage_id
     @appointment = current_user.appointments.build(appointment_params)
     # ^ user_id and datetime..
@@ -18,17 +19,26 @@ class AppointmentsController < ApplicationController
     # ^^ the path requires massage_id
     # ^^^ path: massage/massage_id/appointments
     @appointment.save
-    # redirect
+    flash[:notice] = 'Succesfully booked'
+    redirect_to dashboard_path
+
   end
 
   private
 
   def appointment_params
-    params.require(:appointment).premit(:datetime)
+    params.require(:appointment).permit(:date_time)
   end
 
   def find_massage
-    @massage = Massage.find(params[:massage_id])
+    @massage = Massage.find(params[:appointment][:massage_id])
+  end
+  def check_user
+
+    unless current_user.id == params[:appointment][:user_id].to_i
+      flash[:notice] = 'An error has happened. Try it again'
+      redirect_to massages_path
+    end
   end
   # def find_user
   #   @user = User.find(params[:user_id])
