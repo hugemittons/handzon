@@ -1,22 +1,31 @@
-
-
-<!-- <#%= render 'searchform', search: @search %> -->
-
-
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%), url(<%= image_path "bg-landing.jpg" %>);">
 
-  <div>
-    <%=link_to new_user_session_path do %>
-    <%= image_tag 'user-logo.png', class: 'avatar' %>
-    <% end %>
+  <div class="container-login-landing">
+  <% if user_signed_in? %>
+
+    <div class="navbar-wagon-item">
+      <div class="dropdown">
+        <a href="" id="navbar-wagon-menu" class="navbar-wagon-item navbar-wagon-button btn dropdown-toggle searchpage" data-toggle="dropdown">MY ACCOUNT</a>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to 'Dashboard', dashboard_path %></li>
+          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+        </ul>
+      </div>
+    </div>
+
+  <%else%>
+
+    <%=link_to "SIGN IN", new_user_session_path%>
+
+  <% end %>
   </div>
 
   <div class="container">
     <h1>Handzon</h1>
-    <h5>Massage on demand</h5>
+    <h4>massage on demand</h4>
     <%= form_tag massages_path, :method => 'get', class: 'form-inline' do %>
     <p>
-      <%= select_tag "city", options_from_collection_for_select(@massages, "city", "city") %>
+      <%= select_tag "city", options_for_select(["Barcelona", "San Francisco", "Paris", "London", "Auckland"], "") %>
       <%= select_tag "category", options_for_select(["Any Category", "Thai", "Berber", "Swedish", "Holistic", "Shiatsu"], "Any Category") %>
       <%= submit_tag "Search", class: 'btn btn-primary btn-bordered btn-bordered-primary', :name => nil %>
     </p>

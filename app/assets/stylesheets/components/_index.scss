@@ -5,3 +5,15 @@
 @import "button";
 @import "form";
 @import "massage_card";
+
+.container-login-landing {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.container-login-landing a {
+  color: white;
+  letter-spacing: 3px;
+  flex: 0 0 auto;
+}
