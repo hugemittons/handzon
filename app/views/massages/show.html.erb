@@ -1,29 +1,32 @@
 <div class="container">
   <h1><%= @massage.tagline %></h1>
+  <h4><%= @massage.price %> &#8364; - <%= @massage.length%> minutes</h4>
 
-  <p><%= @massage.description %></p>
-  <p><%= @massage.tagline %></p>
-      <p>&#8364;<%= @massage.price %> for <%= @massage.length%> minutes</p>
+  <p>This will display photos of the massage</p>
 
   <div class="media">
     <div class="media-body">
+
       <div class="media-section">
-        <h2>Pictures</h2>
-        ...
+        <h3>Details</h3>
+        <p><%= @massage.description %></p>
       </div>
+
       <div class="media-section">
-        <h2>Description</h2>
-        ...
+        <h3>Masseuse</h3>
+        <p><%= @massage.user.name %></p>
+        <p>Skills:</p>
+        <p>This will show the masseuse degres</p>
+        <p>TO DO: add in user model: if masseuse == true >> :skills input required</p>
+        <p>Photo:</p>
+        <p>TO DO: add photo uploader</p>
       </div>
+
     </div>
+
     <div class="media-aside">
       <div class="media-section">
-        <h2>Share</h2>
-        ...
-      </div>
-      <div class="media-section">
         <%= render 'shared/new_appointment' %>
-        ...
       </div>
     </div>
   </div>
