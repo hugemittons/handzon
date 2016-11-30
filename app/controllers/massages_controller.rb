@@ -5,6 +5,7 @@ class MassagesController < ApplicationController
   end
 
   def show
+    @massage = Massage.find(params[:id])
     @appointment = Appointment.new
   end
 
