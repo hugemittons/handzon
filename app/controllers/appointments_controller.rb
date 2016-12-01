@@ -18,6 +18,7 @@ class AppointmentsController < ApplicationController
     # ^ params is the massage hash with info about massage params ={massage_id: 11, city:"barcelona",category:...}
     # ^^ the path requires massage_id
     # ^^^ path: massage/massage_id/appointments
+
     @appointment.save
     flash[:notice] = 'Succesfully booked'
     redirect_to dashboard_path
