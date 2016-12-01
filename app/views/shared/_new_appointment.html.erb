@@ -1,9 +1,11 @@
 
 
-      <h2><%= @massage.tagline%></h2>
+      <h3>Book This Massage</h3>
+      <h4><strong><%= @massage.price %> &#8364; for <%= @massage.length%> minutes</strong></h4>
+      <p style="color: #999;">- - - - - - - - - - </p>
         <%= simple_form_for [@massage, @appointment] do |f| %>
         <%= f.input :date_time, label: false %>
-
-        <%= f.submit "book appointment", class: "btn btn-primary" %>
+        <br />
+        <%= f.submit "book appointment", class: "btn btn-primary bookbutton" %>
       <% end %>
 
