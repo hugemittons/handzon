@@ -1,4 +1,4 @@
-<div class="banner-massage" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @massage.photo, height: 300, width: 400, crop: :fill %>');">
+<div class="banner-massage" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= check_user_has_photo %>');">
   <div class="banner-category"></div>
   <div class="banner-description">
     <h1><%= @massage.tagline %></h1>
@@ -34,5 +34,4 @@
 
 
   </div>
-
 </div>
