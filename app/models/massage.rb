@@ -1,4 +1,6 @@
 class Massage < ApplicationRecord
+  mount_uploader :photo, PhotoUploader
+
   CITIES = ["Barcelona", "San Francisco", "Paris", "London", "Auckland"]
   CATEGORIES = ["Thai", "Berber", "Swedish", "Holistic", "Shiatsu"]
   validates :category, inclusion: { in: CATEGORIES }
