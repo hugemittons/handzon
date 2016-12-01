@@ -1,6 +1,6 @@
 class AppointmentsController < ApplicationController
   before_action :find_appointment, only: [:show]
-  before_action :find_massage,:check_user, only: [:create]
+  before_action :find_massage, only: [:create]
   # before_action :find_user, only: [:show]
   # ^ not needed, device provides access on every page
 
@@ -31,17 +31,7 @@ class AppointmentsController < ApplicationController
   end
 
   def find_massage
-    @massage = Massage.find(params[:appointment][:massage_id])
+    @massage = Massage.find(params[:massage_id])
   end
-  def check_user
 
-    unless current_user.id == params[:appointment][:user_id].to_i
-      flash[:notice] = 'An error has happened. Try it again'
-      redirect_to massages_path
-    end
-  end
-  # def find_user
-  #   @user = User.find(params[:user_id])
-  # end
-  # ^ above is not used bc we use device/current_user
 end
