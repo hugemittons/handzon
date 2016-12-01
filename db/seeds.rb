@@ -7,8 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Destroy all
-User.destroy_all
+Appointment.destroy_all
 Massage.destroy_all
+User.destroy_all
 
 # Create users
 user_1 = User.create(
@@ -46,16 +47,6 @@ massage_2 = Massage.create(
   city: "Barcelona"
   )
 
-massage_3 = Massage.create(
-  category: "Thai",
-  user: user_2,
-  description: "The massage is based on the pressure of different energetic points to balance the energy and reduce tension, producing unsurpassable results, stimulating and strengthening body, mind and spirit. Recommended for reducing tension and increasing vitality. Massage done in tatami and without oil. We provide clothing to receive Thai massage.",
-  tagline: "Exotic, unique and legendary",
-  price: 80,
-  length: 30,
-  city: "Paris"
-  )
-
 massage_4 = Massage.create(
   category: "Shiatsu",
   user: user_2,
@@ -64,16 +55,6 @@ massage_4 = Massage.create(
   price: 38,
   length: 30,
   city: "San Francisco"
-  )
-
-massage_5 = Massage.create(
-  category: "Berber",
-  user: user_2,
-  description: "An express face, head and neck massage  to release tension.",
-  tagline: "Oriental Relaxer - Mini Treatment",
-  price: 100,
-  length: 90,
-  city: "Barcelona"
   )
 
 massage_6 = Massage.create(
@@ -118,16 +99,16 @@ massage_9 = Massage.create(
   city: "London"
   )
 
-
-massage_10 = Massage.create(
-  category: "Holistic",
-  user: user_2,
-  description: "Designed to relieve long held chronic tension in the muscle and break up adhesion's in the connective tissue or fascia. Various techniques may be used including, friction, stretching, joint mobilization, breath work and deeper pressure massage strokes.  For the safety and injury prevention of our therapists, we are unable to grant specific gender preferences for this treatment.",
-  tagline: "Deep Tissues Massage",
-  price: 200,
-  length: 80,
-  city: "Barcelona"
+appointment_1 = Appointment.create(
+  date_time: DateTime.new(2001,2,3,4,5,6),
+  user: user_1,
+  massage: massage_7
   )
 
+appointment_1 = Appointment.create(
+  date_time: DateTime.new(2002,2,3,4,5,6),
+  user: user_1,
+  massage: massage_1
+  )
 
 
