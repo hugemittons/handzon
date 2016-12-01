@@ -18,7 +18,7 @@ before_action :set_massage, only: [:show, :edit, :update, :destroy ]
     @massage = Massage.new(massage_params)
     @massage.user = current_user
     @massage.save
-    redirect_to root_path
+    redirect_to massage_path(@massage)
   end
 
   def edit
