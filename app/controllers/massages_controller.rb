@@ -1,37 +1,36 @@
 class MassagesController < ApplicationController
 
-#before_action :massage, only: [:show, :index]
+before_action :set_massage, only: [:show, :edit, :update, :destroy ]
 
   def index
     @massages = Massage.all
   end
 
   def show
-    @massage = Massage.find(params[:id])
     @appointment = Appointment.new
   end
 
   def new
+    @massage = Massage.new
   end
 
   def create
     @massage = Massage.new(massage_params)
+    @massage.save
+    redirect_to massage_path(@massage)
+  end
 
-    if @massage.save
-      redirect_to @massage
-    else
-      render :new
-    end
+  def edit
   end
 
   def update
-    @massage = Massage.create(massage_params)
-    redirect_to massage_path(@massage)
+    @massage.update(massage_params)
+    edirect_to massage_path(@massage)
   end
 
   def destroy
     @massage.destroy
-    redirect_to massage_path
+    redirect_to massages_path
   end
 
   private
