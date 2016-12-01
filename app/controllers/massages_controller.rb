@@ -16,8 +16,9 @@ before_action :set_massage, only: [:show, :edit, :update, :destroy ]
 
   def create
     @massage = Massage.new(massage_params)
+    @massage.user = current_user
     @massage.save
-    redirect_to massages_path
+    redirect_to root_path
   end
 
   def edit
@@ -25,7 +26,7 @@ before_action :set_massage, only: [:show, :edit, :update, :destroy ]
 
   def update
     @massage.update(massage_params)
-    edirect_to massage_path(@massage)
+    redirect_to massage_path(@massage)
   end
 
   def destroy
@@ -40,7 +41,7 @@ before_action :set_massage, only: [:show, :edit, :update, :destroy ]
   end
 
   def massage_params
-    params.require(:massage).permit(:category, :description, :tagline, :price, :length, :user_id, :photo, :photo_cache)
+    params.require(:massage).permit(:category, :description, :tagline, :price, :city, :length, :photo, :photo_cache)
   end
 
 end

@@ -8,7 +8,7 @@ class Massage < ApplicationRecord
   validates :tagline, presence: true
   validates :price, presence: true, uniqueness: true
   validates :length, presence: true, uniqueness: true
-  validates :city, inclusion: { in: CITIES }
+  validates :city, inclusion: { in: CITIES }, presence: true
 
   has_many :attachments
   belongs_to :user

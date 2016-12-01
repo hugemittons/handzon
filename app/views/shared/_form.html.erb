@@ -10,8 +10,8 @@
         </div>
 
         <div class="form-inline">
-          <%= f.label "Chosse a category" %>
           <%= f.select :category, Massage::CATEGORIES %>
+          <%= f.select :city, Massage::CITIES %>
           <div class="form-group form-group-tiny">
             <div class="input-group">
               <%= f.text_field :price, class: "form-control", placeholder: "Price" %>
@@ -37,7 +37,10 @@
           <%= f.hidden_field  :photo_cache, as: :hidden %>
       </div>
 
-      <%= f.submit class: 'btn btn-primary btn-bordered btn-bordered-primary'%>
+      <div class="media-section">
+        <%= f.submit class: 'btn btn-primary btn-bordered btn-bordered-primary'%>
+      </div>
+
     </div>
   </div>
 </div>
