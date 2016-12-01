@@ -10,6 +10,12 @@
               <%= f.text_field :name, autofocus: true %>
           </div>
 
+           <div class="field">
+            <%= f.label "Add profile picture:" %></h3>
+            <%= f.file_field :photo %>
+            <%= f.hidden_field  :photo_cache, as: :hidden %>
+          </div>
+
            <div class="filed">
              <%= f.check_box :masseuse, {}, true %>
              <%= f.label :masseuse, "Masseuse" %>
