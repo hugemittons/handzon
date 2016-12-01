@@ -1,16 +1,22 @@
-<div class="card">
-  <div class="card-category"></div>
-  <div class="card-description">
-    <h2>
-    <%= @massages.category %>
-      <%= @massages.description %>
-      <%= @massages.tagline %>
-      <%= @massages.price %>
-      <%= @massages.length %>
-    </h2>
-    <p>Take it easy</p>
-  </div>
-  <!-- <img class="card-user avatar" src="bg-landing.jpg"> -->
-  <%= image_tag "bg-landing.jpg", class: "card-user avatar" %>
-  <a class="card-link" href="#" ></a>
-</div>
+<% @search_results.each do |massage| %>
+    <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'relaxed_lady.jpg' %>');">
+          <div class="card-category"><p><%= massage.category %></p></div>
+          <div class="card-description">
+            <h2><%= massage.tagline %></h2>
+          </div>
+          <%= image_tag "user_1.jpg", class: "card-user avatar-large", title: massage.user.name %>
+
+          <a class="card-link" href="<%= massage_path(massage)%>" ></a>
+        </div>
+        <div class="card-details">
+          <div class="massage-description">
+          <%= massage.description %>
+          </div>
+          <div class="card-price">
+            <h4><%= massage.price %>&#8364;</h4>
+            <p class="card-minutes"><%= massage.length %> min</p>
+          </div>
+        </div>
+    </div>
+<% end %>
