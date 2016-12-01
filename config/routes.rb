@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'dashboard', to: 'pages#dashboard'
 
-  resources :massages, only: [:show, :index] do
+  resources :massages do
     resources :appointments, only:[:create]
   end
   # post "appointments", to: "appointments#create", as: "massage_appointments"
