@@ -33,7 +33,8 @@
 
       <div class="media-section">
         <h3><%= f.label "Add pictures:" %></h3>
-        <%= f.text_area :description, class: "form-control", placeholder: "Describe your amazing experience"%>
+          <%= f.file_field :photo %>
+          <%= f.hidden_field  :photo_cache, as: :hidden %>
       </div>
 
       <%= f.submit class: 'btn btn-primary btn-bordered btn-bordered-primary'%>

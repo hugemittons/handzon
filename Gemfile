@@ -9,7 +9,7 @@ gem 'omniauth-facebook'
 
 #Cloudinary & Carrierwave to add photo to massage model
 gem 'cloudinary', '1.1.0'
-
+gem 'carrierwave'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
