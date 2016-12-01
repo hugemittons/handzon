@@ -2,29 +2,7 @@
 <div class="wrapper" style="background-color: #ECE1BD;">
   <div class="container">
     <!--- determining if category is selected -->
-    <% if params[:category] == "Any Category"%>
-      <% @search_results = Massage.where city: params[:city] %>
-      <%if @search_results.count == 0 %>
-        <h3>Sorry there is no magic fingers for you, make another search</h3>
-      <%else%>
-        <%if @search_results.count == 1 %>
-          <h3 class="white"><%= @search_results.count %> massage available in <%= params[:city] %></h3>
-        <%else%>
-          <h3 class="white"><%= @search_results.count %> massages available in <%= params[:city] %></h3>
-        <%end%>
-      <% end %>
-    <% else %>
-      <% @search_results = Massage.where city: params[:city], category: params[:category] %>
-      <%if @search_results.count == 0 %>
-        <h3>Sorry there is no magic fingers for you, make another search</h3>
-      <%else%>
-         <%if @search_results.count == 1 %>
-          <h3 class="white"><%= @search_results.count %> massage available in <%= params[:city] %></h3>
-        <%else%>
-          <h3 class="white"><%= @search_results.count %> massages available in <%= params[:city] %></h3>
-        <%end%>
-      <% end %>
-    <% end %>
+    <%= render 'search_result' %>
 
     <!-- printing cards -->
     <div class="row">
