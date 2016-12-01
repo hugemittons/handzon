@@ -1,10 +1,10 @@
-<div class="banner-massage" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'massage-bg-placeholder.jpg' %>');">
+<div class="banner-massage" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @massage.photo, height: 300, width: 400, crop: :fill %>');">
   <div class="banner-category"></div>
   <div class="banner-description">
     <h1><%= @massage.tagline %></h1>
     <h3><%= @massage.category %> massage with <%= @massage.user.name %></h3>
   </div>
-  <img class="banner-user avatar" src="user.jpg">
+
 </div>
 <div class="container">
   <div class="media">
@@ -18,12 +18,10 @@
       <div class="media-section">
         <h3>Masseuse</h3>
         <p><%= @massage.user.name %></p>
-        <p>Skills:</p>
-        <p>This will show the masseuse degres</p>
-        <p>TO DO: add in user model: if masseuse == true >> :skills input required</p>
-        <p>Photo:</p>
-        <p>TO DO: add photo uploader</p>
-        <%#= link_to 'back to results', :back, class: 'btn btn-primary' %>
+        <h3>Skills</h3>
+        <p><%= @massage.user.skill %></p>
+
+        <%= link_to 'back to results', :back, class: 'btn btn-primary' %>
       </div>
 
     </div>

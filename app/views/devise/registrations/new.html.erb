@@ -15,6 +15,11 @@
              <%= f.label :masseuse, "Masseuse" %>
            </div>
 
+           <div class="filed">
+             <%= f.label "Type in your skills"%> <br />
+             <%= f.text_field :skill%>
+           </div>
+
           <div class="field">
             <%= f.label :email %><br />
             <%= f.email_field :email, autofocus: true %>
