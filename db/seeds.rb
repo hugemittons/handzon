@@ -16,8 +16,8 @@ user_1 = User.create(
   name: "Georges Client",
   email: "georges@gmail.com",
   password: "password",
-  address: "123 Client St"
-  phone: "666777888"
+  address: "123 Client St",
+  phone: "666777888",
   masseuse: false
   )
 
@@ -25,8 +25,8 @@ user_2 = User.create(
   name: "Tim Masseuse",
   email: "tim@gmail.com",
   password: "password",
-  address: "123 Massage Terrace"
-  phone: "999888777"
+  address: "123 Massage Terrace",
+  phone: "999888777",
   masseuse: true
   )
 
