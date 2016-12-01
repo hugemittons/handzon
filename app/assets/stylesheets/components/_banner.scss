@@ -22,4 +22,55 @@
   margin-bottom: 20px;
 }
 
+.banner-massage {
+  height: 350px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: #0B1532;
+  position: relative;
+  background-color: #47A8BD;
+  background-image: image-url('relaxed_lady.jpg');
+  border-style: solid;
+  border-width: 5px;
+  border-color: #fff;
+  margin: -10px;
+}
+.banner-user {
+  position: center;
+  top: 50px;
+}
+.banner-category {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  font-size: 20px;
+  color: white;
+}
+.banner-description {
+  position: absolute;
+  bottom: 10px;
+  left: 8%;
+  color: white;
+}
+.banner-description h2 {
+  font-size: 24px;
+}
+.banner-description p {
+  font-size: 13px;
+  }
+.banner-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.banner-link:hover{
+  opacity: 0.1;
+}
+
+
 
