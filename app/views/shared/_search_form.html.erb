@@ -1,0 +1,7 @@
+<%= form_tag massages_path, :method => 'get', class: 'form-inline' do %>
+    <p>
+      <%= select_tag "city", options_for_select(Massage::CITIES) %>
+      <%= select_tag "category", options_for_select(["Any Category"]+Massage::CATEGORIES) %>
+      <%= submit_tag "Search", class: 'btn btn-primary btn-bordered btn-bordered-primary', :name => nil %>
+    </p>
+<% end %>
