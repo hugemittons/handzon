@@ -1,11 +1,24 @@
+<h2><%= @massage.tagline%></h2>
+<div class="form-group">
+  <div class="input-group date" >
+    <%= simple_form_for [@massage, @appointment] do |f| %>
+        <!-- <span class="input-group-addon"> -->
+    <%= f.input :date_time, as: :string, class: "form-control", input_html: { id:"datetimepicker1"} %>
+          <!-- <span class="glyphicon glyphicon-calendar"></span>
+          </span> -->
+  </div>
+    <%= f.submit "book appointment", class: "btn btn-primary" %>
+    <% end %>
+</div>
 
 
-      <h3>Book This Massage</h3>
-      <h4><strong><%= @massage.price %> &#8364; for <%= @massage.length%> minutes</strong></h4>
-      <p style="color: #999;">- - - - - - - - - - </p>
-        <%= simple_form_for [@massage, @appointment] do |f| %>
-        <%= f.input :date_time, label: false %>
-        <br />
-        <%= f.submit "book appointment", class: "btn btn-primary bookbutton" %>
-      <% end %>
 
+<!-- JS for date picker-->
+<%= content_for :js_after_page_load do %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#datetimepicker1').datetimepicker();
+      console.log("js");
+    });
+  </script>
+<% end %>
