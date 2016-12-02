@@ -18,7 +18,8 @@ user_1 = User.create(
   password: "password",
   address: "123 Client St",
   phone: "666777888",
-  masseuse: false
+  masseuse: false,
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480694694/budxgbz159maxue97jvg.jpg"
   )
 
 user_2 = User.create(
@@ -28,7 +29,8 @@ user_2 = User.create(
   address: "123 Massage Terrace",
   phone: "999888777",
   masseuse: true,
-  skill: "Accredited Therapist, 10 years of experience"
+  skill: "Accredited Therapist, 10 years of experience",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696901/Tim_i3z7hm.jpg"
   )
 
 user_3 = User.create(
@@ -38,7 +40,8 @@ user_3 = User.create(
   address: "123 Massage Terrace",
   phone: "999888777",
   masseuse: true,
-  skill: "Accredited Therapist, 8 years of experience, unbelivable hands"
+  skill: "Accredited Therapist, 8 years of experience, unbelivable hands",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480694609/hh6u2cdipn9rhkeieujk.png"
   )
 
 # Create massages
@@ -49,7 +52,8 @@ massage_1 = Massage.create(
   tagline: "Margot's magic hands",
   price: 68,
   length: 60,
-  city: "Barcelona"
+  city: "Barcelona",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/massage_nnpjxk.jpg"
   )
 
 massage_2 = Massage.create(
@@ -59,7 +63,8 @@ massage_2 = Massage.create(
   tagline: "Exotic, unique and legendary",
   price: 98,
   length: 90,
-  city: "Barcelona"
+  city: "Barcelona",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696490/massage-3_zpqyny.jpg"
   )
 
 massage_4 = Massage.create(
@@ -69,7 +74,8 @@ massage_4 = Massage.create(
   tagline: "Shiatsu Back and Neck",
   price: 38,
   length: 30,
-  city: "San Francisco"
+  city: "San Francisco",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/thai-massage_ho4ys9.jpg"
   )
 
 massage_6 = Massage.create(
@@ -79,7 +85,8 @@ massage_6 = Massage.create(
   tagline: "Oriental Relaxer - Mini Treatment",
   price: 40,
   length: 20,
-  city: "San Francisco"
+  city: "San Francisco",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/thai-massage_ho4ys9.jpg"
   )
 
 
@@ -90,7 +97,8 @@ massage_7 = Massage.create(
   tagline: "Relieve the tension",
   price: 50,
   length: 35,
-  city: "Paris"
+  city: "Paris",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_1_t81ytk.jpg"
 )
 
 
@@ -101,7 +109,8 @@ massage_8 = Massage.create(
   tagline: "Muscle Rrefresher Swedish",
   price: 190,
   length: 75,
-  city: "Barcelona"
+  city: "Barcelona",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_2_d78mng.jpg"
 )
 
 massage_9 = Massage.create(
@@ -111,8 +120,31 @@ massage_9 = Massage.create(
   tagline: "Deep Tissues Massage",
   price: 150,
   length: 50,
-  city: "London"
-  )
+  city: "London",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696619/s875674352900086063_p11_i1_w600_ebyopg.jpg"
+)
+
+massage_test = Massage.create(
+  category: "Swedish",
+  user: user_3,
+  description: "Swedish Massage is a system of long strokes, kneading, friction, tapping, percussion, vibration and shaking motions that apply pressure between muscles and bones, rubbing in the same direction as the flow of blood returning to the heart.",
+  tagline: "Give your body the high it deserve",
+  price: 100,
+  length: 60,
+  city: "Barcelona",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/download_1_sk6jrd.jpg"
+)
+
+massage_test2 = Massage.create(
+  category: "Shiatsu",
+  user: user_3,
+  description: "Shiatsu Massage is an alternative technique that involves manual pressure applied to specific points on the body in an attempt to relieve tension and pain.",
+  tagline: "Bye Bye Pain",
+  price: 100,
+  length: 60,
+  city: "Barcelona",
+  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_tisalk.jpg"
+)
 
 appointment_1 = Appointment.create(
   date_time: DateTime.new(2001,2,3,4,5,6),

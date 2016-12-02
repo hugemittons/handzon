@@ -12,7 +12,7 @@ class Massage < ApplicationRecord
 
   has_many :attachments
   belongs_to :user
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
   def average_rating
     review_array = []
