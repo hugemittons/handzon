@@ -32,10 +32,19 @@ module MassagesHelper
     end
   end
 
-  def add_review_show
-    if user_signed_in?
-      render 'massages/add_review'
+  def check_massage_image(massage)
+    if massage.photo.blank?
+      image_path 'bg-landing.jpg'
     else
+      cl_image_path massage.photo
     end
+  end
+
+  def add_review_show
+    render 'massages/add_review' if user_signed_in?
+  end
+
+  def massage_editor
+    render 'pages/massage_editor' if current_user.masseuse?
   end
 end
