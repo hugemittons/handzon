@@ -1,4 +1,5 @@
 <h3>Book This Massage</h3>
+<h4><strong><%= @massage.price %>&#8364; for <%= @massage.length %> minutes</strong></h4>
 <div class="form-group new-appointment">
   <div class="input-group date" >
     <%= simple_form_for [@massage, @appointment] do |f| %>
