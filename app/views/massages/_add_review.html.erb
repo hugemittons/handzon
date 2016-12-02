@@ -1,0 +1,9 @@
+<% @review.errors.full_messages.each do |error| %>
+  <p><% error %><p>
+<% end %>
+<%= simple_form_for [@massage, @review] do |f| %>
+  <%= f.input :rating, as: :radio_buttons, collection: [1, 2, 3, 4, 5], item_wrapper_class: :radio,
+  item_wrapper_tag: :div %>
+  <%= f.input :content, label: false %>
+  <%= f.submit "add review", class: "btn btn-primary" %>
+<% end %>
