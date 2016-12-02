@@ -21,7 +21,9 @@
 
   <%= render 'shared/flashes' %>
   <%= yield %>
-  <%= render 'shared/footer' %>
+  <% unless controller_name == "pages" && action_name == 'search' %>
+    <%= render 'shared/footer' %>
+  <% end %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= yield(:js_after_page_load) %>
 </body>

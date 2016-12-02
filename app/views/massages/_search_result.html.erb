@@ -5,9 +5,9 @@
         <%= render 'shared/search_form' %>
       <%else%>
         <%if @search_results.count == 1 %>
-          <h3 class="white"><%= @search_results.count %> massage available in <%= params[:city] %></h3>
+          <h3><%= @search_results.count %> massage available in <%= params[:city] %></h3>
         <%else%>
-          <h3 class="white"><%= @search_results.count %> massages available in <%= params[:city] %></h3>
+          <h3><%= @search_results.count %> massages available in <%= params[:city] %></h3>
         <%end%>
       <% end %>
     <% else %>
@@ -17,9 +17,9 @@
         <%= render 'shared/search_form' %>
       <%else%>
          <%if @search_results.count == 1 %>
-          <h3 class="white"><%= @search_results.count %> massage available in <%= params[:city] %></h3>
+          <h3><%= @search_results.count %> massage available in <%= params[:city] %></h3>
         <%else%>
-          <h3 class="white"><%= @search_results.count %> massages available in <%= params[:city] %></h3>
+          <h3><%= @search_results.count %> massages available in <%= params[:city] %></h3>
         <%end%>
       <% end %>
 <% end %>
