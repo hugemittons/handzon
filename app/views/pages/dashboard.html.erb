@@ -7,7 +7,7 @@
       <h3>My Appointments</h3>
       <% current_user.appointments.each do |appt| %>
       <div class="col-xs-12 col-sm-6 shadow white">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'bg-landing.jpg' %>');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= check_massage_image(appt.massage) %>');">
         </div>
         <div class="card-block">
           <h4 class="text-center"><strong><%= appt.massage.tagline %></strong></h4>
@@ -31,6 +31,7 @@
       <p><%= current_user.phone %></p>
       <p><%= link_to 'Edit my details', edit_user_registration_path %></p>
       <p><%= link_to 'Delete my account', cancel_user_registration_path %></p>
+      <%= massage_editor %>
     </div>
   </div>
 
