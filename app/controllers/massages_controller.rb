@@ -8,6 +8,7 @@ before_action :set_massage, only: [:show, :edit, :update, :destroy ]
 
   def show
     @appointment = Appointment.new
+    @review = Review.new
   end
 
   def new
@@ -33,6 +34,8 @@ before_action :set_massage, only: [:show, :edit, :update, :destroy ]
     @massage.destroy
     redirect_to massages_path
   end
+
+
 
   private
 

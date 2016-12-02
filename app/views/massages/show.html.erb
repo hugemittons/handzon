@@ -11,6 +11,7 @@
     <div class="media-body">
 
       <div class="media-section">
+        <%= render 'massages/show_rating'%>
         <h3>Details</h3>
         <p><%= @massage.description %></p>
       </div>
@@ -21,7 +22,8 @@
         <h3>Skills</h3>
         <p><%= @massage.user.skill %></p>
 
-        <%= link_to 'back to results', :back, class: 'btn btn-primary' %>
+      <h3>Write A Review</h3>
+        <%= render 'massages/add_review' %>
       </div>
 
     </div>
