@@ -1,4 +1,12 @@
-.new-appointment .submit {
-  margin: 10px;
+
+.new-appointment input[type=submit] {
+  margin-top: 30px;
   width: 100%;
+}
+
+.new-appointment input[type=text] {
+  margin: 10px;
+  width: 140%;
+  text-align: center;
+  line-height: 30px;
 }

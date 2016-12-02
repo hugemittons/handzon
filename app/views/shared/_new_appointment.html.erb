@@ -3,7 +3,7 @@
   <div class="input-group date" >
     <%= simple_form_for [@massage, @appointment] do |f| %>
         <!-- <span class="input-group-addon"> -->
-    <%= f.input :date_time, as: :string, class: "form-control", input_html: { id:"datetimepicker1"}, label: 'Find a time' %>
+    <%= f.input :date_time, as: :string, class: "form-control", input_html: { id:"datetimepicker1"}, placeholder: 'find a time', label: false %>
 
           <!-- <span class="glyphicon glyphicon-calendar"></span>
           </span> -->

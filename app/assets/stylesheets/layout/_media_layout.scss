@@ -15,8 +15,18 @@
   background: #F8F7F7;
   border-left: 1px solid #f0efef;
 }
+
+
 .media-section {
-  margin: 0px auto;
+  margin: 20px auto;
+}
+
+.media-section h3 {
+  margin-top: 20px;
+}
+
+.media-section h4 {
+  margin-top: 50px;
 }
 .media-section:first-child {
   margin-top: 0;

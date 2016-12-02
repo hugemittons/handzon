@@ -1,4 +1,5 @@
 <div class="banner-massage" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= check_user_has_photo %>');">
+  <%= get_avatar %>
   <div class="banner-category"></div>
   <div class="banner-description">
     <h1><%= @massage.tagline %></h1>
@@ -21,19 +22,11 @@
             <div class="media-section">
               <h3>Masseuse</h3>
               <p><%= @massage.user.name %></p>
-              <h3>Skills</h3>
+              <h4>Skills</h4>
               <p><%= @massage.user.skill %></p>
             </div>
 
-              <div class="media-section">
-              <h3>Recent Reviews</h3>
-                <%= render 'massages/show_reviews' %>
-              </div>
 
-              <div class="media-section">
-              <h3>Add Your Review</h3>
-                <%= render 'massages/add_review' %>
-              </div>
 
         </div>
       </div>
@@ -43,6 +36,14 @@
             <div class="media-section text-center">
               <%= render 'shared/new_appointment' %>
             </div>
+            <div class="media-section">
+              <h4>Recent Reviews</h4>
+                <%= render 'massages/show_reviews' %>
+              </div>
+
+              <div class="media-section">
+                <%= add_review_show %>
+              </div>
         </div>
       </div>
     </div>
