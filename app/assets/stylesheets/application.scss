@@ -16,3 +16,23 @@
 
 //Datepicker
 @import "datetimepicker";
+
+.shadow {
+  -moz-box-shadow:    3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3.5px 3.5px 9px #888888;
+}
+
+.appt-card {
+  padding: 15px;
+  color: black;
+}
+
+.card{
+  margin-top: 5px;
+}
+
+.white{
+  background-color: white;
+  margin: 5px;
+}

@@ -1,22 +1,26 @@
 <!-- <style type="text/css"> *{ border: 1px solid red !important;} </style> -->
 
-<div class="wrapper" style="background-color: #ECE1BD;">
+<div class="wrapper" style="background-color: #E8DBB0;">
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-9 appointments-list">
       <h3>My Appointments</h3>
-      <ul>
-        <% current_user.appointments.each do |appt| %>
-        <!--current user either masseuse or client on login-->
-          <% formatted_date_time = appt.date_time%>
-          <li><strong><%= appt.massage.tagline %></strong></li>
-          <li><%= formatted_date_time.strftime("on %B %d %Y at %H:%M %p") %></li>
-          <li>client: <%= appt.user.name %> - <%= appt.user.phone %></li>
-          <li>masseuse: <%= appt.massage.user.name%> - <%= appt.massage.user.phone %></li>
-          <li>location: <%= appt.user.address %></li><!-- sets the address of the client only-->
-              <br>
-        <% end %>
-      </ul>
+      <% current_user.appointments.each do |appt| %>
+      <div class="col-xs-12 col-sm-6 shadow white">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'bg-landing.jpg' %>');">
+        </div>
+        <div class="card-block">
+          <h4 class="text-center"><strong><%= appt.massage.tagline %></strong></h4>
+            <ul>
+              <% formatted_date_time = appt.date_time%>
+              <li><%= formatted_date_time.strftime("Date: %B %d %Y at %H:%M %p") %></li>
+              <li>client: <%= appt.user.name %> - <%= appt.user.phone %></li>
+              <li>masseuse: <%= appt.massage.user.name%> - <%= appt.massage.user.phone %></li>
+              <li>location: <%= appt.user.address %></li><!-- sets the address of the client only-->
+            </ul>
+        </div><!--end of card block-->
+      </div>
+      <% end %>
 
     </div>
     <div class="col-xs-12 col-sm-3 rightwhite">
@@ -32,4 +36,3 @@
 
   </div><!--end of container-->
 </div> <!--end of the wrapper-->
-
