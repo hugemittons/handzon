@@ -19,10 +19,13 @@ class AppointmentsController < ApplicationController
     # ^^ the path requires massage_id
     # ^^^ path: massage/massage_id/appointments
 
-    @appointment.save
+    if @appointment.save
     flash[:notice] = 'Succesfully booked'
     redirect_to dashboard_path
-
+  else
+    flash[:notice] = 'booking invalid'
+    redirect_to massage_path(@massage)
+end
   end
 
   private
