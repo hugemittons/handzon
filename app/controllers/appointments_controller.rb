@@ -1,7 +1,7 @@
 class AppointmentsController < ApplicationController
   before_action :find_appointment, only: [:show]
   before_action :find_massage, only: [:create]
-  # before_action :find_user, only: [:show]
+  before_action :authenticate_user!
   # ^ not needed, device provides access on every page
 
   def show
