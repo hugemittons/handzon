@@ -1,0 +1,5 @@
+<% if @massage.average_rating == 0 %>
+  <h4 style="font-style: oblique; color: #eee;">no ratings yet</h4>
+<% else %>
+  <h4><font color="#FFD50A"><% @massage.average_rating.times do %>&#9733;<%end%></font><font color="#eee"><% (5-@massage.average_rating).times do %>&#9733;<%end%></font> from <%= @massage.reviews.count %> reviews</h4>
+<% end %>

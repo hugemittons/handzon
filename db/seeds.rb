@@ -27,15 +27,26 @@ user_2 = User.create(
   password: "password",
   address: "123 Massage Terrace",
   phone: "999888777",
-  masseuse: true
+  masseuse: true,
+  skill: "Accredited Therapist, 10 years of experience"
+  )
+
+user_3 = User.create(
+  name: "Margot Sylvain",
+  email: "margot@gmail.com",
+  password: "password",
+  address: "123 Massage Terrace",
+  phone: "999888777",
+  masseuse: true,
+  skill: "Accredited Therapist, 8 years of experience, unbelivable hands"
   )
 
 # Create massages
 massage_1 = Massage.create(
   category: "Holistic",
-  user: user_2,
+  user: user_3,
   description: "A deeply therapeutic holistic treatment using blends of essential oils that appeal to the senses, to get a personal response to the needs of each individual. Provides great feel good, frees us from stress and helps to restore balance.",
-  tagline: "Get rid of your stress",
+  tagline: "Margot's magic hands",
   price: 68,
   length: 60,
   city: "Barcelona"
@@ -43,7 +54,7 @@ massage_1 = Massage.create(
 
 massage_2 = Massage.create(
   category: "Thai",
-  user: user_2,
+  user: user_3,
   description: "The massage is based on the pressure of different energetic points to balance the energy and reduce tension, producing unsurpassable results, stimulating and strengthening body, mind and spirit. Recommended for reducing tension and increasing vitality. Massage done in tatami and without oil. We provide clothing to receive Thai massage.",
   tagline: "Exotic, unique and legendary",
   price: 98,

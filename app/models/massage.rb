@@ -12,6 +12,20 @@ class Massage < ApplicationRecord
 
   has_many :attachments
   belongs_to :user
+  has_many :reviews
+
+  def average_rating
+    review_array = []
+    self.reviews.each do |review|
+    review_array << review.rating
+    end
+    if review_array.length == 0
+      return 0
+    else
+      average = review_array.inject(0, &:+) / review_array.length
+      average.round
+    end
+  end
 
 
 end

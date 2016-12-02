@@ -1,11 +1,11 @@
 <% @search_results.each do |massage| %>
     <div class="col-xs-12 col-sm-4 col-md-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path 'relaxed_lady.jpg' %>');">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= check_massage_has_photo_card(massage) %>');">
           <div class="card-category"><p><%= massage.category %></p></div>
           <div class="card-description">
             <h2><%= massage.tagline %></h2>
           </div>
-          <%= image_tag "user_1.jpg", class: "card-user avatar-large", title: massage.user.name %>
+          <%= get_avatar_cards(massage) %>
 
           <a class="card-link" href="<%= massage_path(massage)%>" ></a>
         </div>

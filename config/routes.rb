@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :massages do
     resources :appointments, only:[:create]
+    resources :reviews, only:[:new, :create]
   end
   # post "appointments", to: "appointments#create", as: "massage_appointments"
   # => PATH                   VERB     URI PATTERNS                 CONTROLLER
