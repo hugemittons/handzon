@@ -20,9 +20,7 @@
             </div>
 
             <div class="media-section">
-              <h3>Masseuse</h3>
-              <p><%= @massage.user.name %></p>
-              <h4>Skills</h4>
+              <h3><%= @massage.user.name %></h3>
               <p><%= @massage.user.skill %></p>
             </div>
 
@@ -36,12 +34,12 @@
             <div class="media-section text-center">
               <%= render 'shared/new_appointment' %>
             </div>
-            <div class="media-section">
+            <div class="media-section text-center">
               <h4>Recent Reviews</h4>
                 <%= render 'massages/show_reviews' %>
               </div>
 
-              <div class="media-section">
+              <div class="media-section text-center">
                 <%= add_review_show %>
               </div>
         </div>

@@ -22,7 +22,8 @@ class Massage < ApplicationRecord
     if review_array.length == 0
       return 0
     else
-      return review_array.inject(0, &:+) / review_array.length
+      average = review_array.inject(0, &:+) / review_array.length
+      average.round
     end
   end
 
