@@ -10,6 +10,7 @@
   justify-content: center;
   position: relative;
 }
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
@@ -28,12 +29,12 @@
   background-size: cover !important;
   color: #0B1532;
   position: relative;
-  background-color: #47A8BD;
-  background-image: image-url('relaxed_lady.jpg');
+  background-color: #ccc;
   border-style: solid;
   border-width: 5px;
   border-color: #fff;
   margin: -5px;
+  background-position: center;
 }
 
 .banner-massage img {
