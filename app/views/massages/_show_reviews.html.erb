@@ -1,0 +1,4 @@
+<% @massage.reviews.last(5).each do |review| %>
+  <p><% review.rating.times do %><font color="#FFD50A">&#9733;</font><%end%><% (5-review.rating).times do %><font color="#eee">&#9733;</font><%end%><br />
+  <%= review.content %></p>
+<% end %>

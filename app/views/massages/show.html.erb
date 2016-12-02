@@ -23,10 +23,18 @@
               <p><%= @massage.user.name %></p>
               <h3>Skills</h3>
               <p><%= @massage.user.skill %></p>
-
-            <h3>Write A Review</h3>
-              <%= render 'massages/add_review' %>
             </div>
+
+              <div class="media-section">
+              <h3>Recent Reviews</h3>
+                <%= render 'massages/show_reviews' %>
+              </div>
+
+              <div class="media-section">
+              <h3>Add Your Review</h3>
+                <%= render 'massages/add_review' %>
+              </div>
+
         </div>
       </div>
 
