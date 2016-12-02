@@ -7,33 +7,37 @@
 
 </div>
 <div class="container">
-  <div class="media">
-    <div class="media-body">
 
-      <div class="media-section">
-        <%= render 'massages/show_rating'%>
-        <h3>Details</h3>
-        <p><%= @massage.description %></p>
+    <div class="media">
+      <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <div class="media-body">
+            <div class="media-section">
+              <%= render 'massages/show_rating'%>
+              <h3>Details</h3>
+              <p><%= @massage.description %></p>
+            </div>
+
+            <div class="media-section">
+              <h3>Masseuse</h3>
+              <p><%= @massage.user.name %></p>
+              <h3>Skills</h3>
+              <p><%= @massage.user.skill %></p>
+
+            <h3>Write A Review</h3>
+              <%= render 'massages/add_review' %>
+            </div>
+        </div>
       </div>
 
-      <div class="media-section">
-        <h3>Masseuse</h3>
-        <p><%= @massage.user.name %></p>
-        <h3>Skills</h3>
-        <p><%= @massage.user.skill %></p>
-
-      <h3>Write A Review</h3>
-        <%= render 'massages/add_review' %>
+      <div class="col-sm-12 col-md-4">
+        <div class="media-aside">
+            <div class="media-section text-center">
+              <%= render 'shared/new_appointment' %>
+            </div>
+        </div>
       </div>
-
+    </div>
     </div>
 
-    <div class="media-aside">
-      <div class="media-section text-center">
-        <%= render 'shared/new_appointment' %>
-      </div>
-    </div>
-
-
-  </div>
 </div>
