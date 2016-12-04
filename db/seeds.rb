@@ -19,7 +19,7 @@ user_1 = User.create(
   address: "123 Client St",
   phone: "666777888",
   masseuse: false,
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480694694/budxgbz159maxue97jvg.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696901/Tim_i3z7hm.jpg"
   )
 
 user_2 = User.create(
@@ -30,7 +30,7 @@ user_2 = User.create(
   phone: "999888777",
   masseuse: true,
   skill: "Accredited Therapist, 10 years of experience",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696901/Tim_i3z7hm.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696901/Tim_i3z7hm.jpg"
   )
 
 user_3 = User.create(
@@ -41,7 +41,7 @@ user_3 = User.create(
   phone: "999888777",
   masseuse: true,
   skill: "Accredited Therapist, 8 years of experience, unbelivable hands",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480694609/hh6u2cdipn9rhkeieujk.png"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480694609/hh6u2cdipn9rhkeieujk.png"
   )
 
 # Create massages
@@ -53,7 +53,7 @@ massage_1 = Massage.create(
   price: 68,
   length: 60,
   city: "Barcelona",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/massage_nnpjxk.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/massage_nnpjxk.jpg"
   )
 
 massage_2 = Massage.create(
@@ -64,7 +64,7 @@ massage_2 = Massage.create(
   price: 98,
   length: 90,
   city: "Barcelona",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696490/massage-3_zpqyny.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696490/massage-3_zpqyny.jpg"
   )
 
 massage_4 = Massage.create(
@@ -75,7 +75,7 @@ massage_4 = Massage.create(
   price: 38,
   length: 30,
   city: "San Francisco",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/thai-massage_ho4ys9.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/thai-massage_ho4ys9.jpg"
   )
 
 massage_6 = Massage.create(
@@ -86,7 +86,7 @@ massage_6 = Massage.create(
   price: 40,
   length: 20,
   city: "San Francisco",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/thai-massage_ho4ys9.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480695741/thai-massage_ho4ys9.jpg"
   )
 
 
@@ -98,7 +98,7 @@ massage_7 = Massage.create(
   price: 50,
   length: 35,
   city: "Paris",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_1_t81ytk.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_1_t81ytk.jpg"
 )
 
 
@@ -110,7 +110,7 @@ massage_8 = Massage.create(
   price: 190,
   length: 75,
   city: "Barcelona",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_2_d78mng.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_2_d78mng.jpg"
 )
 
 massage_9 = Massage.create(
@@ -121,7 +121,7 @@ massage_9 = Massage.create(
   price: 150,
   length: 50,
   city: "London",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696619/s875674352900086063_p11_i1_w600_ebyopg.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696619/s875674352900086063_p11_i1_w600_ebyopg.jpg"
 )
 
 massage_test = Massage.create(
@@ -132,7 +132,7 @@ massage_test = Massage.create(
   price: 100,
   length: 60,
   city: "Barcelona",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/download_1_sk6jrd.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/download_1_sk6jrd.jpg"
 )
 
 massage_test2 = Massage.create(
@@ -143,7 +143,7 @@ massage_test2 = Massage.create(
   price: 100,
   length: 60,
   city: "Barcelona",
-  remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_tisalk.jpg"
+  # remote_photo_url: "http://res.cloudinary.com/margot-sylvain/image/upload/v1480696618/images_tisalk.jpg"
 )
 
 appointment_1 = Appointment.create(
